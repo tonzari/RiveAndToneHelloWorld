@@ -5,7 +5,9 @@ import { EventType } from '@rive-app/canvas'
 
 
 document.querySelector('#app').innerHTML = `
-<h1>Rive + Synth</h1>
+<h1>Rive + Tone.js</h1>
+<p>Hello World example. Click listener on Rive box triggers an event during the 'Raise' animation.</p> 
+<p>The event calls tone.js synth function.</p>
 `;
 
 function onRiveEventReceived(riveEvent) {
@@ -13,11 +15,7 @@ function onRiveEventReceived(riveEvent) {
 
   Synth.noteOn();
 
-  //TODO: add new event in rive file to turn note off
-  // Synth.noteOff();
-  
   console.log("Event name", eventData);
-  
 }
 
 // Add event listener and provide callback to handle Rive Event
